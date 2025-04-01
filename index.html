@@ -1,68 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Toyota Cars</title>
+    <title>Dharam Singh Vislavath | Full Stack Java Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/178b204fb4.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <!-- Navigation bar -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cars</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <!-- Background image and text description -->
-        <div class="hero-content">
-            <h1>Welcome to Toyota Cars</h1>
-            <p>Explore our wide range of Toyota vehicles.</p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h3>DHARAM SINGH <span>VISLAVATH</span></h3>
+             
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Expertise</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>   
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Dharam Singh Vislavath</span></h1>
+                <span id="element"></span><br>
+                <p>Full Stack Java Developer | Cloud Engineer | MS in Computer Science @ UNT</p>
+            </div>
         </div>
-    </section>
-    
-    <section class="cars">
-        <!-- Car listings with images and text descriptions -->
-        <div class="car">
-            <img src="car1.jpg" alt="Toyota Car 1">
-            <h2>Toyota Car Model 1</h2>
-            <p>Description of the car.</p>
-            <a href="#" class="btn">Learn More</a>
+    </div>
+    <!-- -----------------About---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="coloumn-1">
+                    <img src="./aboutme.jpg" alt="aboutme">
+                </div>
+
+                <div class="coloumn-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Results-driven Software Engineer with 3+ years of experience in Java full-stack development and DevOps. Proficient in building scalable, secure applications and optimizing databases with expertise in RESTful APIs, CI/CD, and microservices.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Java, Python, JavaScript, TypeScript, Node.js, React.js</li>
+                            <li><span>Frameworks</span><br>Spring Boot, Hibernate/JPA, Next.js, Express.js</li>
+                            <li><span>Databases</span><br>PostgreSQL, MongoDB, MySQL, Redis</li>
+                            <li><span>Cloud & DevOps</span><br>AWS (EC2, S3, Lambda), Azure, Docker, Kubernetes, Jenkins, GitLab CI/CD</li>
+                            <li><span>Practices</span><br>Microservices, REST APIs, CI/CD, Agile, TDD, OOP, Design Patterns</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Tech Mahindra Ltd. - Software Engineer</span><br>
+                                • Improved Java app performance by 30% via multithreading<br>
+                                • Built Spring Boot APIs handling 50K+ daily requests<br>
+                                • Reduced server response time by 25% with Redis caching<br>
+                                • Achieved 95%+ test coverage with JUnit/Mockito<br>
+                                • Refactored legacy code using Java 8+ features<br>
+                                • Developed CI/CD pipelines with Jenkins/Docker
+                            </li>
+                            <li><span>Nexa Systems, Inc. - Software Engineer</span><br>
+                                • Developed microservices with Java/Spring Boot/React<br>
+                                • Optimized SQL queries reducing execution time by 40%<br>
+                                • Containerized apps with Docker/Kubernetes<br>
+                                • Implemented AWS serverless solutions<br>
+                                • Enhanced GitLab CI/CD pipelines reducing release cycles by 50%
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>University of North Texas</span><br>
+                                MS in Computer Science (2023-2025)<br>
+                                Coursework: Databases, Software Engineering, Algorithms, Big Data
+                            </li>
+                            <li><span>Osmania University</span><br>
+                                BE in Electronics & Communication Engineering<br>
+                                GPA: 7.84/10
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <!-- Repeat similar structure for other cars -->
-    </section>
-    
-    <section class="filters">
-        <!-- Search and sorting filters -->
-        <div class="search">
-            <input type="text" placeholder="Search...">
+    </div>
+<!--     ------------------------------------------services------------------------->  
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">Technical Expertise</h1>
+        <div class="service-list">
+            <div>
+                <i class="fa-brands fa-java"></i>
+                <h2>Java Development</h2>
+                <p>Expertise in Spring Boot, Hibernate, and microservices architecture. Experience optimizing Java applications with multithreading and performance tuning. Strong background in RESTful API development and database integration.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-cloud"></i>
+                <h2>Cloud & DevOps</h2>
+                <p>Proficient in AWS services (EC2, S3, Lambda) and containerization with Docker/Kubernetes. Experience building CI/CD pipelines with Jenkins and GitLab. Implemented infrastructure optimizations reducing costs and improving reliability.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Full Stack Development</h2>
+                <p>Skilled in React.js, Next.js, and modern JavaScript frameworks. Strong database expertise with PostgreSQL, MongoDB, and query optimization. Experience building responsive UIs and integrating with backend services.</p>
+            </div>
         </div>
-        <div class="sorting">
-            <label for="sort">Sort by:</label>
-            <select id="sort">
-                <option value="price">Price</option>
-                <option value="year">Year</option>
-                <!-- Add more options as needed -->
-            </select>
+    </div>
+</div>
+<!-- ------------------------------portfolio----------------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Featured Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="./microservices.jpg" alt="Microservices Architecture">
+                <div class="layer">
+                    <h3>High-Performance REST APIs</h3>
+                    <p>Spring Boot microservices handling 50K+ daily requests with 30% performance improvement through multithreading and Redis caching</p>
+                    <ul class="tech-stack">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>Redis</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./realtime-chat.jpg" alt="Real-time Chat Application">
+                <div class="layer">
+                    <h3>Real-time Chat Application</h3>
+                    <p>Secure messaging platform with WebSockets and Spring Security, improving communication speed by 40%</p>
+                    <ul class="tech-stack">
+                        <li>Spring Boot</li>
+                        <li>WebSockets</li>
+                        <li>React</li>
+                        <li>JWT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./ml-recommendation.jpg" alt="ML Recommendation System">
+                <div class="layer">
+                    <h3>ML Recommendation System</h3>
+                    <p>Personalized product recommendations using TensorFlow and Spring Boot, increasing user engagement by 30%</p>
+                    <ul class="tech-stack">
+                        <li>TensorFlow</li>
+                        <li>Spring Boot</li>
+                        <li>React</li>
+                        <li>REST API</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
-    
-    <footer>
-        <!-- Footer section with additional information -->
-        <div class="footer-content">
-            <p>&copy; 2023 Toyota Cars</p>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-            </ul>
+    </div>
+</div>
+<!-- --------------------------contact------------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> dharamsv2000@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +1 (940) 977-0586</p>
+                <p><i class="fa-solid fa-location-dot"></i> Texas, United States</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/vislavath-dharamsingh-8536aa221/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Dharamsingh33" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="./DHARAM_SINGH_VISLAVATH.pdf" download class="button">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
         </div>
-    </footer>
+    </div>
+    <div class="copyright">
+         <p>Copyright © 2023 Dharam Singh Vislavath. All rights reserved.</p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['<b>Java Full Stack Developer</b>', '<b>Cloud Engineer</b>', '<b>DevOps Specialist</b>', '<b>MS Computer Science</b>'],
+      typeSpeed: 100,
+      loop: true
+    });
+</script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-links");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwPuYXgNni4rzr_aBDq7YlwV_rU63DWlhPHqkMQ1DjYtxm9Y8Uxc5u4hoZh5vj-XnW_/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function() {
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>
